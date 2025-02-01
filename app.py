@@ -4,6 +4,10 @@ import re
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return 'Hello, World!'
+
 # Utility function to extract video ID from URL
 def extract_video_id(url):
     pattern = r'(?:https?:\/\/)?(?:www\.|m\.)?(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]{11})'
